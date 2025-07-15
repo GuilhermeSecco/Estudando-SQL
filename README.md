@@ -1,4 +1,4 @@
-#Criando e Editando datasets para treinar e relembrar SQL
+:book:Criando e Editando datasets para treinar e relembrar SQL
 ---
 
 |Primeira Versão| Adicionei uma tabela chamada pessoas que possui atributos como id(chave primária), nome, data de nascimento, sexo, peso, tamanho e nacionalidade|
