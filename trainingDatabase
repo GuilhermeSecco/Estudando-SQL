@@ -32,4 +32,35 @@ INSERT INTO pessoas VALUES
 (DEFAULT, 'Ana', '2005-3-25', 'F', '57.2', '1.55', 'Canada'),
 (DEFAULT, 'Richard', '1991-11-28', 'M', '78.5', '1.87', 'Inglaterra');
 
+alter table pessoas
+add column profissao varchar(10);
+
+alter table pessoas
+drop column profissao;
+
+alter table pessoas
+add column prof varchar(10) after nome;
+
+alter table pessoas
+modify column prof varchar(20);
+
+alter table pessoas
+change column prof profissao varchar(20);
+
 select * from pessoas;
+
+create table if not exists cursos(
+nome varchar(30) not null unique,
+descricao text,
+horas int unsigned,
+totaulas int unsigned,
+ano year default '2016'
+) default charset=utf8mb4;
+
+alter table cursos
+add column idcurso int first;
+
+alter table cursos
+add primary key(idcurso);
+
+describe cursos;
