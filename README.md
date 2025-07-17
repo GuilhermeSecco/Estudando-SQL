@@ -5,3 +5,4 @@
 |:---:|:---|
 |Segunda Versão|Criei uma nova tabela chamada cursos com uma chave primária chamada idcurso, além disso utilizei o comando alter table para modificar o tamanho do varchar da coluna profissão de 10 para 20|
 |Terceira Versão|Adicionei e modifiquei os valores nos campos da tabela cursos, foram utilizados os comandos Update, Delete e Truncate|
+|Quarta Versão|Restaurei o dataset pois havia testado o uso do truncate no dia anterior e depois pratiquei o comando select para selecionar ou ordenar utilizando caracteristicas específicas como base|
