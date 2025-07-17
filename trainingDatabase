@@ -101,3 +101,35 @@ delete from cursos
 where idcurso = '10';
 
 truncate cursos;
+
+select * from pessoas
+order by nome;
+
+select * from pessoas
+where sexo = 'M'
+order by nascimento;
+
+select * from pessoas
+order by nascimento;
+
+select nome, horas, ano from cursos
+order by horas desc, nome;
+
+select * from cursos
+where idcurso <= 5
+order by nome;
+
+select nome, ano from cursos
+where ano between 2012 and 2016
+Order by ano, nome;
+
+select nome, descricao, ano from cursos
+where ano in (2014,2016)
+order by ano, nome desc;
+
+select nome, horas, totaulas from cursos
+where horas > 30 or totaulas < 20;
+
+select nome, peso, altura from pessoas
+where peso <= 80 and altura >= 1.70
+order by nome;
