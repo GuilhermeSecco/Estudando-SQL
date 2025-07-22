@@ -194,3 +194,40 @@ where sexo = 'F' and nacionalidade not like 'Brasil' and nascimento between '199
 
 select count(*) from pessoas
 where sexo = 'F' and altura > 1.70;
+
+select sexo, count(nome) from pessoas
+group by sexo;
+
+select profissao, count(*) from pessoas
+group by profissao
+having count(nome) > 1;
+
+select ano, count(*) from cursos
+group by ano
+order by count(*);
+
+select avg(horas) from cursos
+group by horas
+having horas > (select avg(horas) from cursos);
+
+select avg(peso) from pessoas
+where altura > (select avg(altura) from pessoas);
+
+select profissao, count(*) from pessoas
+group by profissao;
+
+select sexo, count(*) from pessoas
+where nascimento < '1990-01-01'
+group by sexo;
+
+select nacionalidade, count(nome) from pessoas
+where nacionalidade != 'Brasil'
+group by nacionalidade
+having count(nome) > 1
+order by count(nome);
+
+select altura, count(nome) from pessoas
+where peso > 86
+group by altura
+having altura > (select avg(altura) from pessoas)
+order by altura;
