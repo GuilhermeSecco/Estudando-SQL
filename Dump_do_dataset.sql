@@ -63,7 +63,7 @@ CREATE TABLE `pessoas` (
   `altura` decimal(3,2) DEFAULT NULL,
   `nacionalidade` varchar(20) DEFAULT 'Brasil',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `pessoas` (
 
 LOCK TABLES `pessoas` WRITE;
 /*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
-INSERT INTO `pessoas` VALUES (1,'Godofredo',NULL,'1984-01-02','M',78.50,1.83,'Brasil'),(2,'Maria',NULL,'1999-12-30','F',55.20,1.65,'Portugal'),(3,'Creusa',NULL,'1920-07-12','F',48.90,1.55,'Brasil'),(4,'Valter',NULL,'1955-01-05','M',88.20,1.80,'Bolivia'),(5,'Bob',NULL,'1978-04-07','M',104.20,1.70,'Estados Unidos'),(6,'Ana',NULL,'2005-03-25','F',57.20,1.55,'Canada'),(7,'Richard',NULL,'1991-11-28','M',78.50,1.87,'Inglaterra');
+INSERT INTO `pessoas` VALUES (1,'Godofredo de Santos','Programador','1984-01-02','M',78.50,1.83,'Brasil'),(2,'Maria da Silva','Diarista','1999-12-30','F',55.20,1.65,'Portugal'),(3,'Creusa Oliveira','Professora','1920-07-12','F',48.90,1.55,'Brasil'),(4,'Valter da Silva','Eletricista','1955-01-05','M',88.20,1.80,'Bolivia'),(5,'Bob Clay','Caixa','1978-04-07','M',104.20,1.70,'Estados Unidos'),(6,'Ana Texas','Programador','2005-03-25','F',57.20,1.55,'Canada'),(7,'Richard da Silva','Dentista','1991-11-28','M',78.50,1.87,'Inglaterra'),(8,'Isadora Pinheiro','Bailarina','2002-10-05','F',55.80,1.67,'Brasil'),(9,'Iago da Silva','Programador','1998-02-27','M',90.40,1.82,'Brasil'),(10,'Iara Terras','Pintora','1987-07-22','F',67.50,1.72,'Brasil'),(11,'Leticia da Silva','Professora','1992-06-14','F',72.30,1.92,'Chile');
 /*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -85,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-17 15:55:30
+-- Dump completed on 2025-07-22 19:15:32
