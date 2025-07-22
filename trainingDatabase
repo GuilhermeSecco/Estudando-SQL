@@ -133,3 +133,64 @@ where horas > 30 or totaulas < 20;
 select nome, peso, altura from pessoas
 where peso <= 80 and altura >= 1.70
 order by nome;
+
+select nome from cursos
+where nome like "P%";
+
+select nome from cursos
+where nome like "%A";
+
+select nome from cursos
+where nome like '%O%';
+
+select nome from cursos
+where nome not like '%A%';
+
+select nome from cursos
+where nome like '%L_';
+
+select distinct horas from cursos;
+
+select distinct nacionalidade from pessoas;
+
+select count(*) from cursos where horas >30 ;
+
+select max(totaulas) from cursos;
+
+select min(altura) from pessoas;
+
+select sum(totaulas) from cursos;
+
+select sum(horas) from cursos;
+
+select avg(horas) from cursos;
+
+select nome from pessoas
+where sexo = "F";
+
+select nome, nascimento from pessoas
+where nascimento between '1950-1-1' and '1980-12-31';
+
+select nome, profissao from pessoas
+where profissao = 'Programador' and sexo = 'M';
+
+select * from pessoas
+where nome like 'I%' and nacionalidade = 'Brasil'
+limit 10;
+
+select nome, nacionalidade from pessoas
+where nome like '%Silva' and sexo = 'M' and nacionalidade not like 'Brasil' and peso < 100;
+
+select max(altura) from pessoas
+where nacionalidade = 'Brasil' and sexo = 'M';
+
+select avg(altura) from pessoas
+where sexo = 'M';
+
+select * from pessoas;
+
+select min(peso) from pessoas
+where sexo = 'F' and nacionalidade not like 'Brasil' and nascimento between '1990-01-01' and '2010-12-31';
+
+select count(*) from pessoas
+where sexo = 'F' and altura > 1.70;
