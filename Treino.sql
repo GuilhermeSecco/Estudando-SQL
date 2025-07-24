@@ -226,8 +226,40 @@ group by nacionalidade
 having count(nome) > 1
 order by count(nome);
 
-select altura, count(nome) from pessoas
-where peso > 86
-group by altura
-having altura > (select avg(altura) from pessoas)
-order by altura;
+select totaulas, count(nome) from cursos
+group by totaulas
+having totaulas > (select avg(totaulas) from cursos)
+order by totaulas;
+
+alter table pessoas
+add column curso_preferido int after id;
+
+alter table pessoas
+add foreign key(curso_preferido)
+references cursos(idcurso);
+
+desc pessoas;
+
+select * from pessoas;
+select * from cursos;
+
+update pessoas
+set curso_preferido = '4'
+where profissao = 'Programador';
+
+update pessoas
+set curso_preferido = '1'
+where id = '3';
+
+alter table pessoas
+modify column curso_preferido int after profissao;
+
+select p.id, p.nome, p.profissao, c.nome
+from pessoas as p inner join cursos as c
+on c.idcurso = p.curso_preferido
+order by p.id;
+
+select p.nome, c.nome, c.ano 
+from pessoas as p right outer join cursos as c
+on c.idcurso = p.curso_preferido
+order by c.ano, c.nome;
