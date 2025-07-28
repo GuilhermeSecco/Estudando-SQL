@@ -47,6 +47,36 @@ INSERT INTO `cursos` VALUES (1,'HTML5','Curso de HTML5',40,37,2014),(2,'Algoritm
 UNLOCK TABLES;
 
 --
+-- Table structure for table `p_assiste_c`
+--
+
+DROP TABLE IF EXISTS `p_assiste_c`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `p_assiste_c` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `data` date DEFAULT NULL,
+  `idpessoas` int DEFAULT NULL,
+  `idcurso` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idpessoas` (`idpessoas`),
+  KEY `idcurso` (`idcurso`),
+  CONSTRAINT `p_assiste_c_ibfk_1` FOREIGN KEY (`idpessoas`) REFERENCES `pessoas` (`id`),
+  CONSTRAINT `p_assiste_c_ibfk_2` FOREIGN KEY (`idcurso`) REFERENCES `cursos` (`idcurso`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `p_assiste_c`
+--
+
+LOCK TABLES `p_assiste_c` WRITE;
+/*!40000 ALTER TABLE `p_assiste_c` DISABLE KEYS */;
+INSERT INTO `p_assiste_c` VALUES (1,'2025-02-25',5,4),(2,'2025-02-20',2,7),(3,'2025-02-28',6,1),(4,'2025-02-25',4,3),(5,'2025-02-26',1,2);
+/*!40000 ALTER TABLE `p_assiste_c` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pessoas`
 --
 
@@ -88,4 +118,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-24 19:36:35
+-- Dump completed on 2025-07-28 15:00:50

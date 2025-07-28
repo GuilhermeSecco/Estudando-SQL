@@ -263,3 +263,29 @@ select p.nome, c.nome, c.ano
 from pessoas as p right outer join cursos as c
 on c.idcurso = p.curso_preferido
 order by c.ano, c.nome;
+
+create table p_assiste_c(
+id int auto_increment,
+data date,
+idpessoas int,
+idcurso int,
+primary key(id),
+foreign key(idpessoas) references pessoas(id),
+foreign key(idcurso) references cursos(idcurso)
+)default charset = utf8mb4;
+
+insert into p_assiste_c values
+(default,'2025-02-22','5','4'),
+(default,'2025-02-20','2','7'),
+(default,'2025-02-28','6','1'),
+(default,'2025-02-25','4','3'),
+(default,'2025-02-26','1','2');
+
+select * from p_assiste_c;
+
+select a.data, p.nome, c.nome from pessoas as p
+join p_assiste_c as a
+on p.id = a.idpessoas
+join cursos as c
+on a.idcurso = c.idcurso
+order by a.data desc;
